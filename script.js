@@ -1,3 +1,26 @@
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
+
+// Book.prototype.changeStatus = function () {
+//   this.read = !this.read;
+// };
+
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  changeStatus() {
+    this.read = !this.read;
+  }
+}
+
 const myLibrary = [];
 
 myLibrary.push(new Book("Intelligent Design", "William Dembski", 312, true));
@@ -12,17 +35,6 @@ const dialog = document.querySelector(".dialog");
 const overlay = document.querySelector(".overlay");
 const submitBtn = document.querySelector(".submitBtn");
 const form = document.querySelector("form");
-
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
-
-Book.prototype.changeStatus = function () {
-  this.read = !this.read;
-};
 
 function displayBook(book) {
   const card = document.createElement("div");
